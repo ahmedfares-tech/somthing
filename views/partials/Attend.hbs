@@ -1,0 +1,216 @@
+<<<<<<< HEAD
+<div class="col" id="Students Search" style="padding:1%">
+    <div class="row">
+        <div class="col">
+            <form action="" method="post">
+
+                <div class="form-group">
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" placeholder="Search By ID or Name" name="StudentSearch">
+
+                        <div class="input-group-prepend">
+                            <select class="custom-select" name="StudentSearchType">
+                                <option>ID</option>
+                                <option>Name</option>
+                            </select>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<form action="" method="get"></form>
+    <div class="alert alert-warning" role="alert">
+        <h1 class="alert-heading">Course Code<h2 id="done">{{code}}</h2>
+        <input type="hidden" id="coursecod" value="{{code}}">
+        </h1>
+    </div>
+
+    <div class="alert alert-dark" role="alert">
+        <h1 class="alert-heading">Course Total Attend<h3 id="counter"></h3>
+        </h1>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Student ID</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Day</th>
+                <th scope="col">Teacher Name</th>
+                <th scope="col">Course Grade</th>
+                <th scope="col">Course Time</th>
+                <th scope="col">Course Cost</th>
+                <th scope="col">Attendes</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#each attend}}
+            <tr>
+                <td>{{this.StudentID}}</td>
+                <td>{{this.StudentName}}</td>
+                <td>{{this.courseName}}</td>
+                <td>{{this.courseDay}}</td>
+                <td>{{this.TeacherName}}</td>
+                <td>{{this.coursegrade}}</td>
+                <td>{{this.courseTime}}</td>
+                <form action="">
+                    <td>{{this.courseCost}}</td>
+                </form>
+                <td>
+
+                    <form action="/putattend" method="post" id="attend">
+                        <input type="hidden" name="StudentID" id="StudentID" value="{{this.StudentID}}">
+                        <input type="hidden" name="CourseCode" id="CourseCode" value="{{this.CourseCode}}">
+                        <input type="hidden" name="StudentName" id="StudentName" value="{{this.StudentName}}">
+                        <input type="hidden" name="CoursePaided" id="CoursePaided" value="{{this.courseCost}}">
+
+                        <button type="submit" class="btn btn-info" name="attendadd"
+                            id="Attend{{this.StudentID}}{{this.CourseCode}}"
+                            onclick="$(this).hide();$('#Remove{{this.StudentID}}{{this.CourseCode}}').show();">Attend</button>
+                    </form>
+
+
+                    <form action="/removeattend" method="post">
+                        <input type="hidden" name="StudentID" id="StudentID" value="{{this.StudentID}}">
+                        <input type="hidden" name="CourseCode" id="CourseCode" value="{{this.CourseCode}}">
+                        <input type="hidden" name="StudentName" id="StudentName" value="{{this.StudentName}}">
+                        <input type="hidden" name="CoursePaided" id="CoursePaided" value="{{this.courseCost}}">
+
+                        <button type="submit" class="btn btn-danger" name="attendremove"
+                            id="Remove{{this.StudentID}}{{this.CourseCode}}" onload="$(this).hide()"
+                            onclick="$(this).hide();$('#Attend{{this.StudentID}}{{this.CourseCode}}').show();">Remove</button>
+                    </form>
+                    <script>
+                        $('#Remove{{this.StudentID}}{{this.CourseCode}}').hide();
+                    </script>
+
+
+
+
+                </td>
+
+            </tr>
+
+            {{/each}}
+        </tbody>
+    </table>
+=======
+<div class="col" id="Students Search" style="padding:1%">
+    <div class="row">
+        <div class="col">
+            <form action="" method="post">
+
+                <div class="form-group">
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" placeholder="Search By ID or Name" name="StudentSearch">
+
+                        <div class="input-group-prepend">
+                            <select class="custom-select" name="StudentSearchType">
+                                <option>ID</option>
+                                <option>Name</option>
+                            </select>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<form action="" method="get"></form>
+    <div class="alert alert-warning" role="alert">
+        <h1 class="alert-heading">Course Code<h2 id="done">{{code}}</h2>
+        <input type="hidden" id="coursecod" value="{{code}}">
+        </h1>
+    </div>
+
+    <div class="alert alert-dark" role="alert">
+        <h1 class="alert-heading">Course Total Attend<h3 id="counter"></h3>
+        </h1>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Student ID</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Day</th>
+                <th scope="col">Teacher Name</th>
+                <th scope="col">Course Grade</th>
+                <th scope="col">Course Time</th>
+                <th scope="col">Course Cost</th>
+                <th scope="col">Attendes</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#each attend}}
+            <tr>
+                <td>{{this.StudentID}}</td>
+                <td>{{this.StudentName}}</td>
+                <td>{{this.courseName}}</td>
+                <td>{{this.courseDay}}</td>
+                <td>{{this.TeacherName}}</td>
+                <td>{{this.coursegrade}}</td>
+                <td>{{this.courseTime}}</td>
+                <form action="">
+                    <td>{{this.courseCost}}</td>
+                </form>
+                <td>
+
+                    <form action="/putattend" method="post" id="attend">
+                        <input type="hidden" name="StudentID" id="StudentID" value="{{this.StudentID}}">
+                        <input type="hidden" name="CourseCode" id="CourseCode" value="{{this.CourseCode}}">
+                        <input type="hidden" name="StudentName" id="StudentName" value="{{this.StudentName}}">
+                        <input type="hidden" name="CoursePaided" id="CoursePaided" value="{{this.courseCost}}">
+
+                        <button type="submit" class="btn btn-info" name="attendadd"
+                            id="Attend{{this.StudentID}}{{this.CourseCode}}"
+                            onclick="$(this).hide();$('#Remove{{this.StudentID}}{{this.CourseCode}}').show();">Attend</button>
+                    </form>
+
+
+                    <form action="/removeattend" method="post">
+                        <input type="hidden" name="StudentID" id="StudentID" value="{{this.StudentID}}">
+                        <input type="hidden" name="CourseCode" id="CourseCode" value="{{this.CourseCode}}">
+                        <input type="hidden" name="StudentName" id="StudentName" value="{{this.StudentName}}">
+                        <input type="hidden" name="CoursePaided" id="CoursePaided" value="{{this.courseCost}}">
+
+                        <button type="submit" class="btn btn-danger" name="attendremove"
+                            id="Remove{{this.StudentID}}{{this.CourseCode}}" onload="$(this).hide()"
+                            onclick="$(this).hide();$('#Attend{{this.StudentID}}{{this.CourseCode}}').show();">Remove</button>
+                    </form>
+                    <script>
+                        $('#Remove{{this.StudentID}}{{this.CourseCode}}').hide();
+                    </script>
+
+
+
+
+                </td>
+
+            </tr>
+
+            {{/each}}
+        </tbody>
+    </table>
+>>>>>>> InCompleated"
+</form>

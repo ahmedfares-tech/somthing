@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../stylesheets/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/5918f4ec2b.js"></script>
+  <script src="../scripts/studentajax.js"></script>
+  <script src="../scripts/attendajax.js"></script>
+
+  <!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+  <!--===============================================================================================-->
+  <link rel='stylesheet' href='../bower_components/bootstrap/dist/css/bootstrap.css' />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../bower_components/animate/animate.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../bower_components/css-hamburgers/hamburgers.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../bower_components/select2/select2.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../stylesheets/util.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+  <!--===============================================================================================-->
+
+<body>
+
+
+  {{> navbar}}
+  <div class="container-fluid text-center" style="padding:0px">
+    {{{body}}}
+  </div>
+
+
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../javascripts/js/popper.js"></script>
+  <script src="../bower_components/select2/select2.min.js"></script>
+  <script src="../javascripts/tilt/tilt.jquery.min.js"></script>
+
+  <script>
+    $('.js-tilt').tilt({
+      scale: 1.1
+    })
+  </script>
+  <script src="../javascripts/main.js"></script>
+</body>
+
+</html>

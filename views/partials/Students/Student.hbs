@@ -1,0 +1,256 @@
+<<<<<<< HEAD
+<form action="/getcoursesdataforstudnt" method="get">
+
+</form>
+<div class="row" id="Student" style="padding:1%">
+    <div class="col" id="Student Registeration">
+        <form action="/studentREG" method="post">
+            <div class="form-group" id="Name">
+                <label>Full Name</label>
+                <input type="text" class="form-control" placeholder="Full Name: Ahmed Fares" name="StudentName">
+            </div>
+            <div class="form-group" id="Student phone">
+                <label>Student Phone</label>
+                <input type="text" class="form-control" placeholder="Ex: 010000000" name="StudentNumber">
+            </div>
+            <div class="form-group" id="Parents Phone">
+                <label>Parents Phone</label>
+                <input type="text" class="form-control" placeholder="Ex: 010000000" name="StudentParentsPhone">
+            </div>
+            <div class="form-group" id="Whatsapp Phone">
+                <label>Whatsapp Phone</label>
+                <input type="text" class="form-control" placeholder="Ex: 010000000" name="StudentWhatsappPhone">
+            </div>
+            <div class="form-group">
+                <label>Grade</label>
+                <select class="custom-select" name="StudentGrade" id="StudentGrade">
+                    <option>Choose Student Grade</option>
+                    {{#each grade}}
+                    <option>{{this}}</option>
+                    {{/each}}
+
+                </select>
+            </div>
+            <div class="form-group" id="School Name">
+                <label>School Name</label>
+                <input type="text" class="form-control" placeholder="Ex: El malek Fahd" name="StudentSchoolName">
+            </div>
+            <div class="form-group" id="Registeration Amount">
+                <label>Paid Registeration</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Ex: 120" name="StudentRegisterationAmount">
+                    <div class="input-group-append">
+                        <span class="input-group-text">L.E</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="Submit Button">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col" id="Students Search">
+        <form action="/studentSearch" method="post">
+            <div class="form-group">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <input type="text" class="form-control" placeholder="Search By ID or Name" name="StudentSearch">
+                    </div>
+
+                    <select class="custom-select" name="StudentSearchType">
+                        <option>ID</option>
+                        <option>Name</option>
+                    </select>
+
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <button class="btn btn-outline-secondary" type="submit" onclick="location.href='/ListStudent';">Students
+            Table</button>
+
+    </div>
+    <div class="col" id="Students Courses">
+        <form action="/StudentCoursesREG" method="post">
+            <div class="form-group" id="Student ID">
+                <label>ID of student</label>
+                <input type="text" class="form-control" placeholder="ID" name="StudentIDVal">
+            </div>
+            <div class="form-group" id="Course Name">
+                <label>Course Name</label>
+                <select class="custom-select" name="CourseName" id="StudentCourseName">
+                    <option>Choose Course Name</option>
+                    {{#each courses}}
+                    <option>{{this}}</option>
+                    {{/each}}
+
+
+                </select>
+            </div>
+            <div class="form-group" id="TeacherNamediv">
+                <label>Teacher Name</label>
+                <select class="custom-select" name="TeacherName" id="TeacherName">
+                </select>
+            </div>
+
+            <div class="form-group" id="CourseGradeDIV">
+                <label>Course Grade</label>
+                <select class="custom-select" name="CourseGRADE_add" id="CourseGRADE_add">
+
+                </select>
+            </div>
+
+            <div class="form-group" id="CourseDay">
+                <label>Course Day</label>
+                <select class="custom-select" name="Day" id="coda">
+                </select>
+            </div>
+
+            <div class="form-group" id="CourseTimeDIV">
+                <label for="School">course Time:</label>
+                <select class="custom-select" name="time" id="CourseTime">
+
+                </select>
+            </div>
+            <div class="form-group" id="CourseCost">
+
+            </div>
+            <div class="form-group mt-2" id="ButtonAddCourse">
+
+            </div>
+ 
+        </form>
+    </div>
+=======
+<form action="/getcoursesdataforstudnt" method="get">
+
+</form>
+<div class="row" id="Student" style="padding:1%">
+    <div class="col" id="Student Registeration">
+        <form action="/studentREG" method="post">
+            <div class="form-group" id="Name">
+                <label>Full Name</label>
+                <input type="text" class="form-control" placeholder="Full Name: Ahmed Fares" name="StudentName">
+            </div>
+            <div class="form-group" id="Student phone">
+                <label>Student Phone</label>
+                <input type="text" class="form-control" placeholder="Ex: 010000000" name="StudentNumber">
+            </div>
+            <div class="form-group" id="Parents Phone">
+                <label>Parents Phone</label>
+                <input type="text" class="form-control" placeholder="Ex: 010000000" name="StudentParentsPhone">
+            </div>
+            <div class="form-group" id="Whatsapp Phone">
+                <label>Whatsapp Phone</label>
+                <input type="text" class="form-control" placeholder="Ex: 010000000" name="StudentWhatsappPhone">
+            </div>
+            <div class="form-group">
+                <label>Grade</label>
+                <select class="custom-select" name="StudentGrade" id="StudentGrade">
+                    <option>Choose Student Grade</option>
+                    {{#each grade}}
+                    <option>{{this}}</option>
+                    {{/each}}
+
+                </select>
+            </div>
+            <div class="form-group" id="School Name">
+                <label>School Name</label>
+                <input type="text" class="form-control" placeholder="Ex: El malek Fahd" name="StudentSchoolName">
+            </div>
+            <div class="form-group" id="Registeration Amount">
+                <label>Paid Registeration</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Ex: 120" name="StudentRegisterationAmount">
+                    <div class="input-group-append">
+                        <span class="input-group-text">L.E</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="Submit Button">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col" id="Students Search">
+        <form action="/studentSearch" method="post">
+            <div class="form-group">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <input type="text" class="form-control" placeholder="Search By ID or Name" name="StudentSearch">
+                    </div>
+
+                    <select class="custom-select" name="StudentSearchType">
+                        <option>ID</option>
+                        <option>Name</option>
+                    </select>
+
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <button class="btn btn-outline-secondary" type="submit" onclick="location.href='/ListStudent';">Students
+            Table</button>
+
+    </div>
+    <div class="col" id="Students Courses">
+        <form action="/StudentCoursesREG" method="post">
+            <div class="form-group" id="Student ID">
+                <label>ID of student</label>
+                <input type="text" class="form-control" placeholder="ID" name="StudentIDVal">
+            </div>
+            <div class="form-group" id="Course Name">
+                <label>Course Name</label>
+                <select class="custom-select" name="CourseName" id="StudentCourseName">
+                    <option>Choose Course Name</option>
+                    {{#each courses}}
+                    <option>{{this}}</option>
+                    {{/each}}
+
+
+                </select>
+            </div>
+            <div class="form-group" id="TeacherNamediv">
+                <label>Teacher Name</label>
+                <select class="custom-select" name="TeacherName" id="TeacherName">
+                </select>
+            </div>
+
+            <div class="form-group" id="CourseGradeDIV">
+                <label>Course Grade</label>
+                <select class="custom-select" name="CourseGRADE_add" id="CourseGRADE_add">
+
+                </select>
+            </div>
+
+            <div class="form-group" id="CourseDay">
+                <label>Course Day</label>
+                <select class="custom-select" name="Day" id="coda">
+                </select>
+            </div>
+
+            <div class="form-group" id="CourseTimeDIV">
+                <label for="School">course Time:</label>
+                <select class="custom-select" name="time" id="CourseTime">
+
+                </select>
+            </div>
+            <div class="form-group" id="CourseCost">
+
+            </div>
+            <div class="form-group mt-2" id="ButtonAddCourse">
+
+            </div>
+ 
+        </form>
+    </div>
+>>>>>>> InCompleated"
+</div>
